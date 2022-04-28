@@ -44,7 +44,7 @@ const Navbar = () => {
         variant="unstyled"
         borderRadius={0}
         w={{base: "140px",md: "200px"}}
-        h={{base: "40px",md:"60px"}}
+        h={{base: "40px",md:"50px"}}
         border="1px"
         borderColor="black"
         fontSize={{base: "18px",md:"22px"}}
