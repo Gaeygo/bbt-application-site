@@ -4,7 +4,7 @@ import Logo from "../images/esa.png";
 
 const Footer = () => {
   return (
-    <Flex mx="auto" mt="158px" mb="133px" w={{base: "100%",md:"80%"}} direction="column">
+    <Flex mx={{md:"auto" }}mt="158px" mb="133px" w={{base: "100%",md:"80%"}} direction="column">
       <Flex fontSize="18px" fontWeight={400}  justify={{base: "space-around",md:"space-between"}}>
         <Box>
           <Image mb="16px" h="33px" w="94px" src={Logo} />
