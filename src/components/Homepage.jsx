@@ -71,7 +71,7 @@ const Homepage = () => {
               h="45px"
               borderRadius="4px"
               backgroundColor="#04538B"
-              fontSize="16px"
+              fontSize={{base: "14px",md:"16px"}}
               textColor=" #FDFCFC"
               variant="unstyled"
               _hover={{
@@ -87,7 +87,7 @@ const Homepage = () => {
               h="45px"
               borderRadius="4px"
               backgroundColor="white"
-              fontSize="16px"
+              fontSize={{base: "14px",md:"16px"}}
               variant="unstyled"
             >
               Visit BBT's Site
