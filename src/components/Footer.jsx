@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Flex mx={{base: "auto",md:"auto" }}mt="158px" mb="133px" w={{base: "85%",md:"85%"}} direction="column" >
       <Flex   fontSize="18px" direction={{base: "column", md: "row"}} fontWeight={400}  justify={{base: "space-around",md:"space-between"}}>
-        <Box mb={{base:"170px", md: "0"}}>
+        <Box mb={{base:"145px", md: "0"}}>
           <Image mb="16px" h="33px" w="94px" src={Logo} />
           <Text textAlign="left" >Helping business break threshold</Text>
         </Box>
