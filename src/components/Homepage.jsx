@@ -7,7 +7,7 @@ import cloud from "../images/cloud.svg";
 const Homepage = () => {
   return (
     <>
-      <Flex justify="space-between" w="80%" mx="auto" mt="31px">
+      <Flex justify="space-between" w="85%" mx="auto" mt="31px">
         <Box border="2px solid #04538B" borderRadius="5px">
           <Box
             borderRadius="5px"
@@ -62,7 +62,7 @@ const Homepage = () => {
         </Flex>
       </Flex>
       <Sponsors />
-      <Stack mt="200px" w="80%" mx="auto">
+      <Stack mt="200px" w="85%" mx="auto">
         <Text fontSize="28px" fontWeight={600} textAlign="center">
           Providing essential tools & sevices for your business{" "}
         </Text>
@@ -74,7 +74,7 @@ const Homepage = () => {
       </Stack>
       <Flex
         mt="120px"
-        w="80%"
+        w="85%"
         gap="60px"
         mx="auto"
         flexWrap="wrap"

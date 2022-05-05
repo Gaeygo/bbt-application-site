@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <Flex
       as={motion.div}
-      w={{ base: "100%", md: "80%" }}
+      w={{ base: "100%", md: "85%" }}
       h="100px"
       direction="row"
       justifyContent={{ base: "space-around", md: "space-between" }}

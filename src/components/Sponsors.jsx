@@ -11,7 +11,7 @@ const Sponsors = () => {
     <Flex
       direction="row"
       flexWrap="wrap"
-      width={"80%"}
+      width={"85%"}
       mx="auto"
       justify="space-around"
       align="center"
@@ -58,7 +58,7 @@ const Sponsors = () => {
     // <Grid
     //  templateColumns={{base:"repeat(3, auto)",md:"repeat(5,auto)"}}
     // //  gridAutoFlow="column"
-    //   width={"80%"}
+    //   width={"85%"}
     //   mx="auto"
     //   mt="200px"
     //   justifyContent={{md:"space-between"}}
