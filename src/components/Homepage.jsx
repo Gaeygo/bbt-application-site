@@ -3,29 +3,34 @@ import { Flex, Box, Text, Button, Stack } from "@chakra-ui/react";
 import Sponsors from "./Sponsors";
 import Product from "./Product";
 import cloud from "../images/cloud.svg";
+import data from "../images/data.svg";
+import api from "../images/api.svg";
+import sharepoint from "../images/sharepoint.svg";
+import devops from "../images/devops.svg";
 
 const Homepage = () => {
   return (
     <>
       <Flex
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column", lg: "row" }}
         justify="space-between"
         w="85%"
         mx="auto"
         mt="31px"
+        gap="30px"
       >
         <Box
-          w={{ md: "400px" }}
-          maxW={{ base: "350px", md: "400px" }}
-          h={{ base: "350px", md: "378px" }}
+          w={{ lg: "390px" }}
+          maxW={{ base: "350px", lg: "490px" }}
+          h={{ base: "350px", lg: "378px" }}
           border="2px solid #04538B"
           borderRadius="5px"
         >
           <Box
             borderRadius="5px"
-            w={{ md: "400px" }}
-            maxW={{ base: "350px", md: "400px" }}
-            h={{ base: "350px", md: "378px" }}
+            w={{ lg: "390px" }}
+            maxW={{ base: "350px", lg: "490px" }}
+            h={{ base: "350px", lg: "398px" }}
             backgroundColor="#04538B"
             position="relative"
             left="20px"
@@ -59,7 +64,7 @@ const Homepage = () => {
             gap={{ base: "20px", md: "0" }}
             w="70%"
             direction="row"
-            mb={{ base: "120px", md: "0" }}
+            mb={{ base: "60px", md: "0" }}
           >
             <Button
               w={{ base: "170px", md: "400px" }}
@@ -91,7 +96,7 @@ const Homepage = () => {
         </Flex>
       </Flex>
       <Sponsors />
-      <Stack mt="200px" w="85%" mx="auto">
+      <Stack mt="150px" w="85%" mx="auto">
         <Text
           fontSize={{ base: "22px", md: "28px" }}
           fontWeight={600}
@@ -112,10 +117,10 @@ const Homepage = () => {
       <Flex
         mt="120px"
         w="85%"
-        gap={{ base: "120px", md: "60px" }}
+        gap={{ base: "120px", md: "150px" }}
         mx="auto"
         flexWrap="wrap"
-        alignItems="center"
+        // alignItems="center"
         justify="center"
       >
         <Product
@@ -124,24 +129,24 @@ const Homepage = () => {
           desc="We use Machine Learning to generate analytics while pooling resources , managing containers without compromising on security"
         />
         <Product
-          src={cloud}
-          Title="Cloud Computing"
-          desc="We use Machine Learning to generate analytics while pooling resources , managing containers without compromising on security"
+          src={api}
+          Title="API Integration & Management"
+          desc="Services like Authentication, Authorization,lifecycle, management and version management, consumption management, analytics and self service"
         />
         <Product
-          src={cloud}
-          Title="Cloud Computing"
-          desc="We use Machine Learning to generate analytics while pooling resources , managing containers without compromising on security"
+          src={devops}
+          Title="Devops"
+          desc="Devops engineering, Migration of workloads, Disaster Recovery & Backup, Serverless applications, Cloud native solutions ati be be lo"
         />
         <Product
-          src={cloud}
-          Title="Cloud Computing"
-          desc="We use Machine Learning to generate analytics while pooling resources , managing containers without compromising on security"
+          src={data}
+          Title="Data & Application"
+          desc="Software Development, Frontend Development, Mobile Application Development, Unit testing, Data Analysis, Data Migration & Machine Learning"
         />
         <Product
-          src={cloud}
-          Title="Cloud Computing"
-          desc="We use Machine Learning to generate analytics while pooling resources , managing containers without compromising on security"
+          src={sharepoint}
+          Title="Sharepoint"
+          desc="Document management and collaboration, Site creation, Regulatory compliance, Data Security, Business process automation & Building custom apps"
         />
       </Flex>
     </>

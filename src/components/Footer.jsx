@@ -20,17 +20,20 @@ const Footer = () => {
           </Stack>
           <Stack>
             <Text fontSize="24px" fontWeight={600}>
-              Contact
+              Company
             </Text>
-            <Text>hello@esa.com</Text>
-            <Text>+234 800 1234 567</Text>
+            <Text>Team</Text>
+            <Text>About</Text>
+            <Text>Partners</Text>
+            <Text>Services</Text>
           </Stack>{" "}
           <Stack>
             <Text fontSize="24px" fontWeight={600}>
-              Contact
+              Legal
             </Text>
-            <Text>hello@esa.com</Text>
-            <Text>+234 800 1234 567</Text>
+            <Text>Privacy Policy</Text>
+            <Text>Terms of use</Text>
+            <Text>Cookie Policy</Text>
           </Stack>
         </Flex>
       </Flex>
