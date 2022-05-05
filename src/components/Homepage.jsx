@@ -7,6 +7,7 @@ import data from "../images/data.svg";
 import api from "../images/api.svg";
 import sharepoint from "../images/sharepoint.svg";
 import devops from "../images/devops.svg";
+import { transform } from "framer-motion";
 
 const Homepage = () => {
   return (
@@ -71,13 +72,20 @@ const Homepage = () => {
               h="45px"
               borderRadius="4px"
               backgroundColor="#04538B"
-              fontSize={{base: "14px",md:"16px"}}
+              fontSize={{ base: "14px", md: "16px" }}
               textColor=" #FDFCFC"
               variant="unstyled"
               _hover={{
                 backgroundColor: " #FDFCFC",
                 textColor: "#04538B",
                 border: "1px solid #04538B ",
+              }}
+              _active={{
+                border: "none",
+                transform: "scale(1.1)"
+              }}
+              _focus = {{
+                border: "none"
               }}
             >
               Learn More
@@ -87,8 +95,15 @@ const Homepage = () => {
               h="45px"
               borderRadius="4px"
               backgroundColor="white"
-              fontSize={{base: "14px",md:"16px"}}
+              fontSize={{ base: "14px", md: "16px" }}
               variant="unstyled"
+              _active={{
+                borderColor: "none",
+                transform: "scale(1.1)",
+              }}
+              _focus = {{
+                border: "none"
+              }}
             >
               Visit BBT's Site
             </Button>
