@@ -38,6 +38,7 @@ const Navbar = () => {
         ml={{ md: "10%" }}
         gap={3}
         textDecoration="none"
+        display={{base: "none", md: "flex"}}
       >
         <Link _hover={{ textDecoration: "none" }}>About us</Link>
         <Link _hover={{ textDecoration: "none" }}>Partners </Link>
