@@ -15,7 +15,7 @@ const Contact = () => {
         </Text>
       </Stack>{" "}
       <Stack>
-        <Text onClick={() => window.location = 'mailto:yourmail@gmail.com'} >hello@esa.com</Text>
+        <Text  >hello@esa.com</Text>
         <Text>0800 100 2345</Text>
       </Stack>
     </Flex>
