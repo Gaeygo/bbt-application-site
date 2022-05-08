@@ -9,7 +9,7 @@ const Contact = () => {
         <Text fontSize="36px" fontWeight={600} >Talk to Us Today</Text>
       </Stack>
       <Stack>
-        <Text w="55%">
+        <Text w={{base: "75%",md:"55%"}}>
           We help businesses break thresholds. Contact us today if you want to
           do the same
         </Text>
