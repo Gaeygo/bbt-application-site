@@ -12,10 +12,22 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import Logo from "../images/esa.png";
+import {
+  Link as reactLink,
+  useLocation,
+  useNavigate,
+  NavLink,
+} from "react-router-dom";
 
-const MotionButton = motion(Button);
+const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
+  const scrollToElement = (inputRef) => {};
+  const navigate = useNavigate()
+  const location = useLocation()
 
-const Navbar = () => {
+  const handleNav = (path) => {
+    if(location.pathname === path) return
+    navigate(path)
+  }
   return (
     <Flex
       as={motion.div}
@@ -27,7 +39,7 @@ const Navbar = () => {
       margin="auto"
       fontSize={{ base: "18px", md: "24px" }}
     >
-      <Image w="94px" h="33px" src={Logo} />
+      <Image onClick={() => handleNav("/")} w="94px" h="33px" src={Logo} />
       <Flex
         fontWeight={400}
         w={{ md: "344px" }}
@@ -38,9 +50,11 @@ const Navbar = () => {
         ml={{ md: "10%" }}
         gap={3}
         textDecoration="none"
-        display={{base: "none", md: "flex"}}
+        display={{ base: "none", md: "flex" }}
       >
-        <Link _hover={{ textDecoration: "none" }}>About us</Link>
+        <Link onClick={scrollToElement} _hover={{ textDecoration: "none" }}>
+          About us
+        </Link>
         <Link _hover={{ textDecoration: "none" }}>Partners </Link>
         <Link _hover={{ textDecoration: "none" }}>Services</Link>
       </Flex>
@@ -63,6 +77,7 @@ const Navbar = () => {
         whileHover={{
           scale: 1.1,
         }}
+        onClick={() => handleNav("/contact")}
         
       >
         Contact Us

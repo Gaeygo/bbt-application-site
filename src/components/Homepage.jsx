@@ -104,6 +104,7 @@ const Homepage = () => {
               _focus = {{
                 border: "none"
               }}
+              onClick={()=> window.open("http://blueprintnet.com/", "_blank")}        
             >
               Visit BBT's Site
             </Button>
