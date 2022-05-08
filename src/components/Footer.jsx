@@ -27,18 +27,11 @@ const Footer = () => {
           direction={{ base: "column", md: "row" }}
           textAlign="left"
         >
-          <Stack>
-            <Text fontSize="24px" fontWeight={600}>
-              Contact
-            </Text>
-            <Text>hello@esa.com</Text>
-            <Text>+234 800 1234 567</Text>
-          </Stack>
+          
           <Stack>
             <Text fontSize="24px" fontWeight={600}>
               Company
             </Text>
-            <Text>Team</Text>
             <Text>About</Text>
             <Text>Partners</Text>
             <Text>Services</Text>
@@ -64,7 +57,9 @@ const Footer = () => {
           Contact
         </Text>
         <Text>No 42, Awolowo Road, Ikoyi, Lagos.</Text>
-        <Text>hello@esa.com</Text>
+        <Text _hover={{cursor: "pointer"}} onClick={() => window.location = 'mailto:yourmail@gmail.com'}>hello@esa.com</Text>
+        <Text>+234 800 1234 567</Text>
+
       </Flex>
       <Flex
         mt="100px"
