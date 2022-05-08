@@ -25,7 +25,7 @@ const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
   const location = useLocation()
 
   const handleNav = (path) => {
-    // if(location.pathname === path) return
+    if(location.pathname === path) return
     navigate(path)
   }
   return (
