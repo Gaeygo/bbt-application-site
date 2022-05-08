@@ -52,6 +52,7 @@ const Footer = () => {
         textAlign="left"
         justify={{ base: "space-around", md: "space-between" }}
         direction="column"
+        mt= {{base: "110px", md: "0"}}
       >
         <Text fontSize="24px" fontWeight={600}>
           Contact

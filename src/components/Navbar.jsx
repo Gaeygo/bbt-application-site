@@ -39,7 +39,7 @@ const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
       margin="auto"
       fontSize={{ base: "18px", md: "24px" }}
     >
-      <Image onClick={() => handleNav("/")} w="94px" h="33px" src={Logo} />
+      <Image _hover={{cursor: "pointer"}} onClick={() => handleNav("/")} w="94px" h="33px" src={Logo} />
       <Flex
         fontWeight={400}
         w={{ md: "344px" }}
