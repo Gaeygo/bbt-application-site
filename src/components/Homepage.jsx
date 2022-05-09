@@ -1,5 +1,16 @@
 import React from "react";
-import { Flex, Box, Text, Button, Stack } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  Button,
+  Stack,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+} from "@chakra-ui/react";
+import { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import Sponsors from "./Sponsors";
 import Product from "./Product";
 import cloud from "../images/cloud.svg";
@@ -82,10 +93,10 @@ const Homepage = () => {
               }}
               _active={{
                 border: "none",
-                transform: "scale(1.1)"
+                transform: "scale(1.1)",
               }}
-              _focus = {{
-                border: "none"
+              _focus={{
+                border: "none",
               }}
             >
               Learn More
@@ -101,10 +112,10 @@ const Homepage = () => {
                 borderColor: "none",
                 transform: "scale(1.1)",
               }}
-              _focus = {{
-                border: "none"
+              _focus={{
+                border: "none",
               }}
-              onClick={()=> window.open("http://blueprintnet.com/", "_blank")}        
+              onClick={() => window.open("http://blueprintnet.com/", "_blank")}
             >
               Visit BBT's Site
             </Button>
@@ -142,7 +153,14 @@ const Homepage = () => {
         <Product
           src={cloud}
           Title="Cloud Computing"
-          desc="We use Machine Learning to generate analytics while pooling resources , managing containers without compromising on security"
+          desc="Services like On-demand Self-service,
+          Security Governance,
+          Resource pooling,
+          Analytics,
+          Machine learning,
+          Migration and
+          Containers.
+          "
         />
         <Product
           src={api}
@@ -164,6 +182,80 @@ const Homepage = () => {
           Title="Sharepoint"
           desc="Document management and collaboration, Site creation, Regulatory compliance, Data Security, Business process automation & Building custom apps"
         />
+      </Flex>
+      <Flex w="100%" backgroundColor="black" minH="500px" mt="245px">
+        <Flex
+          align="center"
+          justify="center"
+          w="85%"
+          mx="auto"
+          direction={{ base: "column", lg: "row" }}
+        >
+          <Stack textAlign="left" textColor="white">
+            <Text w={{base:"100%",md:"65%"}} textColor="#F6E9E9" fontSize={{base: "26px",md:"32px"}} fontWeight={500} mb={{base: "45px",lg: "0"}} >
+              We Provide Quality & Efficient Solutions for Businesses
+            </Text>
+            <Text mb={{base: "25px", md: "25px",lg: "0"}} fontWeight={400} fontSize="18px">
+              Some frequently asked questions{" "}
+            </Text>
+          </Stack>
+          <Accordion mt={{base: "50px", md: "0"}} w={{base: "100%",lg:"55%"}} textColor="white" allowMultiple>
+            <AccordionItem>
+              {({ isExpanded }) => (
+                <>
+                  <AccordionButton _focus={{outline: "none"}}>
+                    <Box
+                      fontSize={{base:"16px",md:"20px"}}
+                      fontWeight={500}
+                      flex="1"
+                      textAlign="left"
+                    >
+                      Which Cloud Services Do you work with
+                    </Box>
+                    {isExpanded ? (
+                      <MinusIcon fontSize="12px" />
+                    ) : (
+                      <AddIcon fontSize="12px" />
+                    )}
+                  </AccordionButton>
+                  <AccordionPanel textAlign="left" pb={4} >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </AccordionPanel>
+                </>
+              )}
+            </AccordionItem>
+            <AccordionItem>
+              {({ isExpanded }) => (
+                <>
+                  <AccordionButton  _focus={{outline: "none"}}>
+                    <Box
+                      fontSize={{base:"16px",md:"20px"}}
+                      fontWeight={500}
+                      flex="1"
+                      textAlign="left"
+                    >
+                      Which Programming Languages you work with
+                    </Box>
+                    {isExpanded ? (
+                      <MinusIcon fontSize="12px" />
+                    ) : (
+                      <AddIcon fontSize="12px" />
+                    )}
+                  </AccordionButton>
+                  <AccordionPanel textAlign="left" pb={4}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </AccordionPanel>
+                </>
+              )}
+            </AccordionItem>
+          </Accordion>
+        </Flex>
       </Flex>
     </>
   );
