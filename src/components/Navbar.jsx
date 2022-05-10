@@ -29,6 +29,7 @@ const Navbar = () => {
   };
 
   const scrollToElement = (id) => {
+    if(location.pathname === "/contact") return
     const divElement = document.getElementById(id);
     divElement.scrollIntoView({ behavior: 'smooth' });
   };

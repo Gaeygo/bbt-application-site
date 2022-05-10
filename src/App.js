@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 import {  Route, Routes } from "react-router-dom";
 import Contact from "./components/Contact";
+import Page404 from "./components/_404"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Page404/>} />
         </Routes>
 
         <Footer />
