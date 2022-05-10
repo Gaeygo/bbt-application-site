@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import {
   Flex,
@@ -18,16 +18,21 @@ import {
   useNavigate,
   NavLink,
 } from "react-router-dom";
+import ScrollContext from "../scrollContext";
 
-const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
-  const scrollToElement = (inputRef) => {};
-  const navigate = useNavigate()
-  const location = useLocation()
-
+const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const handleNav = (path) => {
-    if(location.pathname === path) return
-    navigate(path)
-  }
+    if (location.pathname === path) return;
+    navigate(path);
+  };
+
+  const scrollToElement = (id) => {
+    const divElement = document.getElementById(id);
+    divElement.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Flex
       as={motion.div}
@@ -39,7 +44,13 @@ const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
       margin="auto"
       fontSize={{ base: "18px", md: "24px" }}
     >
-      <Image _hover={{cursor: "pointer"}} onClick={() => handleNav("/")} w="94px" h="33px" src={Logo} />
+      <Image
+        _hover={{ cursor: "pointer" }}
+        onClick={() => handleNav("/")}
+        w="94px"
+        h="33px"
+        src={Logo}
+      />
       <Flex
         fontWeight={400}
         w={{ md: "344px" }}
@@ -52,11 +63,11 @@ const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
         textDecoration="none"
         display={{ base: "none", md: "flex" }}
       >
-        <Link onClick={scrollToElement} _hover={{ textDecoration: "none" }}>
-          About us
+        <Link onClick={ () => scrollToElement("about")} _hover={{ textDecoration: "none" }}>About us</Link>
+        <Link onClick={ () => scrollToElement("partners")} _hover={{ textDecoration: "none" }}>Partners </Link>
+        <Link onClick={ () => scrollToElement("services")} _hover={{ textDecoration: "none" }}>
+          Services
         </Link>
-        <Link _hover={{ textDecoration: "none" }}>Partners </Link>
-        <Link _hover={{ textDecoration: "none" }}>Services</Link>
       </Flex>
 
       <Button
@@ -78,7 +89,6 @@ const Navbar = ({ aboutRef, serviceRef, partnerRef }) => {
           scale: 1.1,
         }}
         onClick={() => handleNav("/contact")}
-        
       >
         Contact Us
       </Button>

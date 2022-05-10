@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Sponsors = () => {
   return (
     <>
-      <Text
+      <Text id="partners"
         mt={{base: "100px",md: "170px"}}
         fontSize={{base: "16px",md:"24px"}}
         fontWeight={500}
